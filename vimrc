@@ -50,6 +50,7 @@ Plug 'tpope/vim-sensible'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'tmhedberg/SimpylFold'
 
@@ -62,7 +63,7 @@ Plug 'nvie/vim-flake8'
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
-Plug  'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'easymotion/vim-easymotion'
 
