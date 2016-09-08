@@ -9,13 +9,13 @@
 
 And in your vimrc:
 
-!!!! call plug#begin()
-Plug 'tpope/vim-sensible'
+> call plug#begin()
+> Plug 'tpope/vim-sensible'
 
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-call plug#end()
+> " On-demand loading
+> Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+> call plug#end()
 
 Y entrando a Vim, ejecutar
 
-!!! :PlugInstall
+> :PlugInstall
