@@ -4,8 +4,12 @@
 
 ### Para utilizar vim-plug
 
-> curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
->    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```sh
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+
 
 And in your vimrc:
 
