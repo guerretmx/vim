@@ -45,27 +45,28 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 set encoding=utf-8
 
-call plug#begin()
+call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
 Plug 'tmhedberg/SimpylFold'
-
 Plug 'vim-scripts/indentpython.vim'
-
 Plug 'scrooloose/syntastic'
-
 Plug 'nvie/vim-flake8'
-
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'easymotion/vim-easymotion'
+
+Plug 'junegunn/goyo.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+Plug 'reedes/vim-pencil'
 
 call plug#end()
 
@@ -144,3 +145,33 @@ nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Vim markdown
+
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_folding_level = 6
+
+" Goyo
+map <C-g> :Goyo<CR>
+map <C-o> :Goyo!<CR>
+
+" Pencil
+
+set nocompatible
+filetype plugin on       " may already be in your .vimrc
+
+let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init({'wrap': 'hard'})
+augroup END
+
+nnoremap <silent> Q gqap
+xnoremap <silent> Q gq
+nnoremap <silent> <leader>Q vapJgqap
+
+let g:pencil#textwidth = 74
+
