@@ -68,6 +68,10 @@ Plug 'plasticboy/vim-markdown'
 
 Plug 'reedes/vim-pencil'
 
+Plug 'Townk/vim-autoclose'
+
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 let mapleader=","
@@ -174,4 +178,30 @@ xnoremap <silent> Q gq
 nnoremap <silent> <leader>Q vapJgqap
 
 let g:pencil#textwidth = 74
+
+
+" Emmet
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" Type ("_" is the cursor position):
+"
+" html:5_
+"
+" Then type <c-y>, (Ctrly,), and you should see:
+"
+" <!DOCTYPE HTML>
+" <html lang="en">
+" <head>
+"     <meta charset="UTF-8">
+"         <title></title>
+"         </head>
+"         <body>
+"             _
+"             </body>
+"             </html>"
+"
+"             More Tutorials
+"             https://raw.githubusercontent.com/mattn/emmet-vim/master/TUTORIAL
 
