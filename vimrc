@@ -72,6 +72,8 @@ Plug 'Townk/vim-autoclose'
 
 Plug 'mattn/emmet-vim'
 
+Plug 'ervandew/supertab'
+
 call plug#end()
 
 let mapleader=","
