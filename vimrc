@@ -93,7 +93,7 @@ set splitright
 " split navigations
 
 nnoremap <C-L> :tabn<CR>
-nnoremap <C-H> :tabn<CR>
+nnoremap <C-H> :tabp<CR>
 
 " Enable folding
 set foldmethod=indent
