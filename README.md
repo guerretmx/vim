@@ -61,3 +61,4 @@ $ wget http://ftp.stust.edu.tw/vim/runtime/macros/justify.vim \
 
 Este comando copiará `justify.vim` en tu directorio de plugins, de modo que ya no necesitarás cargarlo con el comando `:runtime`, si prefieres instalarlo como si hubiera sido distribuido con el editor, puedes copiarlo directamente al directorio `$VIMRUNTIME/macros.`
 
+## [Markdown en github](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
