@@ -41,9 +41,9 @@ Vim también permite alinear texto. Una vez que ya definiste el ancho del texto 
 --------|------------
 Comando	| Sirve para…
 --------|-------------
-:left	|alinear texto a la izquierda.
-:right	|alinear texto a la derecha.
-:center	|centrar texto.
+:left	| alinear texto a la izquierda.
+:right	| alinear texto a la derecha.
+:center	| centrar texto.
 
 
 Para justificar el texto no hay un comando propio del editor, pero gracias a un alma noble de nombre Preben “Peppe” Guldberg, existe un script llamado justify.vim que, muchas veces es incluido con el editor y proporciona, entre otras cosas, un comando llamado :Justify (nota como el nombre empieza con mayúscula), que justamente cumple con la función de justificar texto. Para habilitar este script ejecuta :runtime macros/justify.ivm. Si tu instalación de Vim no incluye este script pero tienes ganas de utilizarlo, puedes encontrarlo fácilmente en Internet. Si utilizas Linux puedes descargarlo así:
