@@ -24,16 +24,20 @@ call plug#end()
 
 Y entrando a Vim, ejecutar
 
-> :PlugInstall
+```bash
+:PlugInstall
+```
 
-## Definiendo márgenes
+## [Definiendo márgenes](https://codingornot.com/2016/09/13/11-vim-formato/)
 
 A diferencia de un editor de palabra como Writer de LibreOffice, en un editor de texto plano, no tenemos un punto de referencia predefinido para determinar dónde debe terminar un renglón. Si has utilizado editores de texto más simples, como nano o notepad tal vez hayas escrito líneas de texto muy largas. En Vim puedes utilizar la variable numérica textwidth (o su abreviatura `tw`) para indicar la longitud máxima que tendrán los renglones en el documento. Si una línea de texto excede el límite establecido por `tw`, esta será dividida por un salto de línea. Si el valor de esta opción es cero (el valor por defecto) inhabilita el margen y te permite escribir líneas tan largas como quieras.
 
-> :set textwidth=80 "El margen es fijado a 80 columnas
-> :set tw=0         "El margen es inhabilitado
-> :set textwidth    "Consulta el valor actual de 'textwidth'
-> :help 'textwidth' "Obtiene más información sobre esta variable
+```bash
+:set textwidth=80 "El margen es fijado a 80 columnas
+:set tw=0         "El margen es inhabilitado
+:set textwidth    "Consulta el valor actual de 'textwidth'
+:help 'textwidth' "Obtiene más información sobre esta variable
+```
 
 ## Alineando texto
 
@@ -47,12 +51,13 @@ Comando	| Sirve para…
 :center	| centrar texto.
 
 
-Para justificar el texto no hay un comando propio del editor, pero gracias a un alma noble de nombre Preben “Peppe” Guldberg, existe un script llamado justify.vim que, muchas veces es incluido con el editor y proporciona, entre otras cosas, un comando llamado :Justify (nota como el nombre empieza con mayúscula), que justamente cumple con la función de justificar texto. Para habilitar este script ejecuta :runtime macros/justify.ivm. Si tu instalación de Vim no incluye este script pero tienes ganas de utilizarlo, puedes encontrarlo fácilmente en Internet. Si utilizas Linux puedes descargarlo así:
+Para justificar el texto no hay un comando propio del editor, pero gracias a un alma noble de nombre Preben “Peppe” Guldberg, existe un script llamado justify.vim que, muchas veces es incluido con el editor y proporciona, entre otras cosas, un comando llamado `:Justify` (nota como el nombre empieza con mayúscula), que justamente cumple con la función de justificar texto. Para habilitar este script ejecuta `:runtime macros/justify.ivm.` Si tu instalación de Vim no incluye este script pero tienes ganas de utilizarlo, puedes encontrarlo fácilmente en Internet. Si utilizas Linux puedes descargarlo así:
 
-1
-2
-3
+```bash
 $ mkdir -p $HOME/.vim/plugin # Solo si el directorio no existe
 $ wget http://ftp.stust.edu.tw/vim/runtime/macros/justify.vim \
 -O $HOME/.vim/plugin/justify.vim
-Este comando copiará justify.vim en tu directorio de plugins, de modo que ya no necesitarás cargarlo con el comando :runtime, si prefieres instalarlo como si hubiera sido distribuido con el editor, puedes copiarlo directamente al directorio $VIMRUNTIME/macros.
+```
+
+Este comando copiará `justify.vim` en tu directorio de plugins, de modo que ya no necesitarás cargarlo con el comando `:runtime`, si prefieres instalarlo como si hubiera sido distribuido con el editor, puedes copiarlo directamente al directorio `$VIMRUNTIME/macros.`
+
