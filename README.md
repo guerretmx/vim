@@ -28,10 +28,10 @@ Y entrando a Vim, ejecutar
 
 A diferencia de un editor de palabra como Writer de LibreOffice, en un editor de texto plano, no tenemos un punto de referencia predefinido para determinar dónde debe terminar un renglón. Si has utilizado editores de texto más simples, como nano o notepad tal vez hayas escrito líneas de texto muy largas. En Vim puedes utilizar la variable numérica textwidth (o su abreviatura `tw`) para indicar la longitud máxima que tendrán los renglones en el documento. Si una línea de texto excede el límite establecido por `tw`, esta será dividida por un salto de línea. Si el valor de esta opción es cero (el valor por defecto) inhabilita el margen y te permite escribir líneas tan largas como quieras.
 
->  :set textwidth=80 "El margen es fijado a 80 columnas
->  :set tw=0         "El margen es inhabilitado
->  :set textwidth    "Consulta el valor actual de 'textwidth'
->  :help 'textwidth' "Obtiene más información sobre esta variable
+> :set textwidth=80 "El margen es fijado a 80 columnas
+> :set tw=0         "El margen es inhabilitado
+> :set textwidth    "Consulta el valor actual de 'textwidth'
+> :help 'textwidth' "Obtiene más información sobre esta variable
 
 ## Alineando texto
 
