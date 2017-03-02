@@ -38,7 +38,6 @@ A diferencia de un editor de palabra como Writer de LibreOffice, en un editor de
 Vim también permite alinear texto. Una vez que ya definiste el ancho del texto en tu documento, ya tienes un marco de referencia contra el cual alinear texto a la izquierda, a la derecha e incluso centrarlo y justificarlo. Las primeras tres opciones son bastante simples, solo tienes que utilizar el comando correspondiente:
 
 
---------|------------
 Comando	| Sirve para…
 --------|-------------
 :left	| alinear texto a la izquierda.
