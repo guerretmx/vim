@@ -2,4 +2,3 @@
 *.swp
 .netrwhist
 autoload/*
-vim/*
