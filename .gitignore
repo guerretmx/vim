@@ -2,5 +2,4 @@
 *.swp
 .netrwhist
 autoload/*
-plugged/*
 vim/*
