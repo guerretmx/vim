@@ -30,7 +30,7 @@ au BufNewFile,BufRead *.py :
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
     \ set textwidth=79 |
-    \ set expandtab |
+    \ set expandtab|
     \ set autoindent |
     \ set fileformat=unix |
 
@@ -42,48 +42,63 @@ au BufNewFile,BufRead *.js,*.html,*.css :
 set encoding=utf-8
 
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
+" Plug 'tpope/vim-sensible'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tmhedberg/SimpylFold'
-Plug 'vim-scripts/indentpython.vim'
+"Plug 'tmhedberg/SimpylFold'
+"Plug 'vim-scripts/indentpython.vim'
 Plug 'scrooloose/syntastic'
-Plug 'nvie/vim-flake8'
-Plug 'jnurmine/Zenburn'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'nvie/vim-flake8'
+" Color schemes
+Plug 'flazz/vim-colorschemes'
+
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'easymotion/vim-easymotion'
-Plug 'klen/python-mode'
-Plug 'tpope/vim-dispatch'
-
+" Plug 'klen/python-mode'
+" Distraction-free writing in vim with goyo
 Plug 'junegunn/goyo.vim'
+" To use:   :Tab /| --alinea con respecto al caracter |
+" Debo revisar mas este plugin. Esta bien interesante
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-
+" Rethinking Vim as a tool for writers
 Plug 'reedes/vim-pencil'
-
+" cierra parentesis, y cosas así
 Plug 'Townk/vim-autoclose'
-
+" for html
 Plug 'mattn/emmet-vim'
-
-Plug 'ervandew/supertab'
+" Perform all your vim insert mode completions with Tab
+" Plug 'ervandew/supertab'
 Plug 'davidhalter/jedi-vim'
+
+" Configuring for react native
+
+Plug 'mxw/vim-jsx'
+Plug 'SirVer/ultisnips'
+
+" Currently, es6 version of snippets is available in es6 branch only
+Plug 'letientai299/vim-react-snippets', { 'branch': 'es6' }
+
+Plug 'honza/vim-snippets' "optional
+" And a bunch of others!
+"
+" Check vim/plugged/vim-react-snippets/UltiSnips/javascript.snippets to see the full list.
 
 call plug#end()
 
 let mapleader=","
 
 if has('gui_running')
-   set background=dark
-   colorscheme solarized
+   colorscheme borland
 else
-   colorscheme zenburn
+   colorscheme borland
 endif
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 
 " Splits
 set splitbelow
@@ -227,36 +242,36 @@ autocmd FileType html,css EmmetInstall
 " ]M            Jump on next class or method (normal, visual, operator modes)
 
 " https://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
-let g:pymode_rope = 0
+"let g:pymode_rope = 0
 
 " Documentation
-let g:pymode_doc = 1
-let g:pymode_doc_key = 'K'
+"let g:pymode_doc = 1
+"let g:pymode_doc_key = 'K'
 
 "Linting
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pyflakes,pep8"
+"let g:pymode_lint = 1
+"let g:pymode_lint_checker = "pyflakes,pep8"
 " Auto check on save
-let g:pymode_lint_write = 1
+"let g:pymode_lint_write = 1
 
 " Support virtualenv
-let g:pymode_virtualenv = 1
+"let g:pymode_virtualenv = 1
 
 " Enable breakpoints plugin
-let g:pymode_breakpoint = 1
-let g:pymode_breakpoint_bind = '<leader>b'
+"let g:pymode_breakpoint = 1
+"let g:pymode_breakpoint_bind = '<leader>b'
 
 " syntax highlighting
-let g:pymode_syntax = 1
-let g:pymode_syntax_all = 1
-let g:pymode_syntax_indent_errors = g:pymode_syntax_all
-let g:pymode_syntax_space_errors = g:pymode_syntax_all
+"let g:pymode_syntax = 1
+"let g:pymode_syntax_all = 1
+"let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+"let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
-let g:pymode_folding = 0
+"let g:pymode_folding = 0
 
 " Use <leader>l to toggle display of whitespace
-nmap <leader>l :set list!<CR>
+"nmap <leader>l :set list!<CR>
 " automatically change window's cwd to file's dir
 set autochdir
 
@@ -269,3 +284,24 @@ set expandtab
 if has ('gui_running')
     highlight Pmenu guibg=#cccccc gui=bold
 endif
+
+let g:jedi#auto_initialization = 0
+let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#popup_select_first = 0
+let g:jedi#show_call_signatures = "1"
+
+" Adding configuration for JSX
+" Taking from https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
+
+" Check vim/plugged/vim-react-snippets/UltiSnips/javascript.snippets to see the full list.
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
