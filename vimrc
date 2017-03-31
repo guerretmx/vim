@@ -58,6 +58,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'easymotion/vim-easymotion'
 Plug 'klen/python-mode'
+Plug 'tpope/vim-dispatch'
 
 Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
@@ -128,7 +129,7 @@ nnoremap <leader>gp :Ggrep<Space>
 nnoremap <leader>gm :Gmove<Space>
 nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
-nnoremap <leader>gps git push origin master<CR>
+nnoremap <leader>gps :Dispatch! git push origin master<CR>
 nnoremap <leader>gpl :Dispatch! git pull<CR>
 
 " Easy motion
