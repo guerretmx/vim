@@ -412,3 +412,7 @@ inoremap <silent> <F7> <C-o>:PFormatToggle<cr>
 
 nnoremap <C-L> :tabn<CR>
 nnoremap <C-H> :tabp<CR>
+
+" ------------ Tabular -------------
+" :Tab \|
+" :Tabular \:
