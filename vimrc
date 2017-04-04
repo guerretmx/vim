@@ -286,10 +286,6 @@ augroup END
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
-                            \ | call lexical#init()
-                            \ | call litecorrect#init()
-                            \ | call textobj#quote#init()
-                            \ | call textobj#sentence#init()
 augroup END
 
 let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
@@ -309,10 +305,6 @@ let g:airline_section_x = '%{PencilMode()}'
 let g:pencil#mode_indicators = {'hard': '␍', 'auto': 'ª', 'soft': '⤸', 'off': '',}
 function! Prose()
   call pencil#init()
-  call lexical#init()
-  call litecorrect#init()
-  call textobj#quote#init()
-  call textobj#sentence#init()
 
   " manual reformatting shortcuts
   nnoremap <buffer> <silent> Q gqap
