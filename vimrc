@@ -21,6 +21,7 @@ Plug 'bling/vim-airline'
 " NerdTree
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 "Syntastic
 "Once you’ve installed Syntastic, it should syntax highlight your errors by
 "displaying little marks next to the offending lines:
@@ -51,6 +52,25 @@ Plug 'Shougo/neocomplcache.vim'
 " Rethinking Vim as a tool for writers
 Plug 'reedes/vim-pencil'
 
+" jiangmiao/auto-pairs
+Plug 'jiangmiao/auto-pairs'
+
+" tpope/vim-repeat
+" If you've ever tried using the . command after a plugin map, you were likely
+" disappointed to discover it only repeated the last native command inside
+" that map, rather than the map as a whole. That disappointment ends today.
+" Repeat.vim remaps . in a way that plugins can tap into it.
+"
+Plug 'tpope/vim-repeat'
+
+" -------------- Color schemes
+Plug 'flazz/vim-colorschemes'
+
+" http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+Plug 'godlygeek/tabular'
+
+" for html
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " ============ Finaliza Vim-Plug ===
@@ -73,6 +93,12 @@ set background=dark
 
 " Set the colorscheme
 colorscheme solarized
+
+"if has('gui_running')
+"   colorscheme borland
+"else
+"   colorscheme borland
+"endif
 
 " ============ bling/vim-airline settings ============
 " Always show statusbar
@@ -324,3 +350,65 @@ autocmd FileType markdown,mkd,text call Prose()
 command! -nargs=0 Prose call Prose()
 noremap <silent> <F7> :<C-u>PFormatToggle<cr>
 inoremap <silent> <F7> <C-o>:PFormatToggle<cr>
+
+" ---------------- tpope/vim-surround ---------------
+"  Surround.vim is all about "surroundings": parentheses, brackets, quotes,
+"  XML tags, and more. The plugin provides mappings to easily delete, change
+"  and add such surroundings in pairs.
+"
+"  It's easiest to explain with examples. Press cs"' inside
+"
+""Hello world!"
+"to change it to
+
+"'Hello world!'
+"Now press cs'<q> to change it to
+
+"<q>Hello world!</q>
+"To go full circle, press cst" to get
+
+"Hello world!"
+"To remove the delimiters entirely, press ds".
+"
+"Hello world!
+"Now with the cursor on "Hello", press ysiw] (iw is a text object).
+"
+"[Hello] world!
+"Let's make that braces and add some space (use } instead of { for no space):
+"cs]{
+"
+"{ Hello  } world!
+"Now wrap the entire line in parentheses with yssb or yss).
+"
+"({ Hello  } world!)
+"Revert to the original text: ds{ds)
+"
+"Hello world!
+"Emphasize hello: ysiw<em>
+"
+"<em>Hello</em> world!
+"Finally, let's try out visual mode. Press a capital V (for linewise visual
+"mode) followed by S<p class="important">.
+"
+"<p class="important">
+"  <em>Hello</em> world!
+"  </p>
+"  This plugin is very powerful for HTML and XML editing, a niche which
+"  currently seems underfilled in Vim land. (As opposed to HTML/XML inserting,
+"  for which many plugins are available). Adding, changing, and removing pairs
+"  of tags simultaneously is a breeze.
+"
+"  The . command will work with ds, cs, and yss if you install repeat.vim.}
+"} })
+""
+""
+"  "
+
+
+" ---------------------- tpope/vim-repeat
+
+
+" split navigations
+
+nnoremap <C-L> :tabn<CR>
+nnoremap <C-H> :tabp<CR>
