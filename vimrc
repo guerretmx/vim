@@ -71,6 +71,21 @@ Plug 'godlygeek/tabular'
 
 " for html
 Plug 'mattn/emmet-vim'
+
+" ++++++++++++++++++++++ 
+" Configuring for react native
+
+Plug 'mxw/vim-jsx'
+Plug 'SirVer/ultisnips'
+
+" Currently, es6 version of snippets is available in es6 branch only
+Plug 'letientai299/vim-react-snippets', { 'branch': 'es6' }
+
+Plug 'honza/vim-snippets' "optional
+" And a bunch of others!
+"
+" Check vim/plugged/vim-react-snippets/UltiSnips/javascript.snippets to see the full list.
+
 call plug#end()
 
 " ============ Finaliza Vim-Plug ===
