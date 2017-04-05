@@ -94,6 +94,9 @@ Plug 'honza/vim-snippets' "optional
 "
 " Check vim/plugged/vim-react-snippets/UltiSnips/javascript.snippets to see the full list.
 
+" Distraction-free writing in vim with goyo
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 " ============ Finaliza Vim-Plug ===
@@ -356,3 +359,23 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 
  " If you want :UltiSnipsEdit to split your window.
  let g:UltiSnipsEditSplit="vertical"
+
+ " ----------------- Goyo ------------------------
+function! s:goyo_enter()
+  silent !tmux set status off
+  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+endfunction
+
+function! s:goyo_leave()
+  silent !tmux set status on
+  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set showmode
+  set showcmd
+  set scrolloff=5
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave() 
