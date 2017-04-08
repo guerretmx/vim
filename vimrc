@@ -99,6 +99,7 @@ Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
+set gfn=Monospace\ Bold\ 14
 " ============ Finaliza Vim-Plug ===
 
 " ========== General Settings =========
@@ -112,7 +113,7 @@ set hlsearch
 syntax on
 
 " Toggle this to "light" for light colorscheme
-set background=dark
+set background=light
 
 "Uncomment the next line if your terminal is not configured for solarized 
 "let g:solarized_termcolors=256
@@ -120,11 +121,11 @@ set background=dark
 " Set the colorscheme
 colorscheme solarized
 
-"if has('gui_running')
-"   colorscheme borland
-"else
-"   colorscheme borland
-"endif
+if has('gui_running')
+   colorscheme borland
+else
+   colorscheme molokai
+endif
 
 " ============ bling/vim-airline settings ============
 " Always show statusbar

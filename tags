@@ -1,0 +1,52 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+<C-H>	/home/guerretmx/vim/vimrc	/^nnoremap <C-H> :tabp<CR>$/;"	m	language:Vim
+<C-L>	/home/guerretmx/vim/vimrc	/^nnoremap <C-L> :tabn<CR>$/;"	m	language:Vim
+<F7>	/home/guerretmx/vim/vimrc	/^inoremap <silent> <F7> <C-o>:PFormatToggle<cr>$/;"	m	language:Vim
+<F7>	/home/guerretmx/vim/vimrc	/^noremap <silent> <F7> :<C-u>PFormatToggle<cr>$/;"	m	language:Vim
+<leader>b	/home/guerretmx/vim/vimrc	/^nmap <silent> <leader>b :TagbarToggle<CR>$/;"	m	language:Vim
+<Leader>f	/home/guerretmx/vim/vimrc	/^nmap <Leader>f <Plug>(easymotion-f)$/;"	m	language:Vim
+<leader>t	/home/guerretmx/vim/vimrc	/^nmap <silent> <leader>t :NERDTreeTabsToggle<CR>$/;"	m	language:Vim
+g:airline#extensions#hunks#non_zero_only	/home/guerretmx/vim/vimrc	/^let g:airline#extensions#hunks#non_zero_only = 1$/;"	v	language:Vim
+g:airline#extensions#tabline#enabled	/home/guerretmx/vim/vimrc	/^let g:airline#extensions#tabline#enabled=1$/;"	v	language:Vim
+g:airline_detect_paste	/home/guerretmx/vim/vimrc	/^let g:airline_detect_paste=1$/;"	v	language:Vim
+g:airline_powerline_fonts	/home/guerretmx/vim/vimrc	/^let g:airline_powerline_fonts = 1$/;"	v	language:Vim
+g:airline_section_x	/home/guerretmx/vim/vimrc	/^let g:airline_section_x = '%{PencilMode()}'$/;"	v	language:Vim
+g:easytags_async	/home/guerretmx/vim/vimrc	/^let g:easytags_async = 1$/;"	v	language:Vim
+g:easytags_dynamic_files	/home/guerretmx/vim/vimrc	/^let g:easytags_dynamic_files = 2$/;"	v	language:Vim
+g:easytags_events	/home/guerretmx/vim/vimrc	/^let g:easytags_events = ['BufReadPost', 'BufWritePost']$/;"	v	language:Vim
+g:easytags_resolve_links	/home/guerretmx/vim/vimrc	/^let g:easytags_resolve_links = 1$/;"	v	language:Vim
+g:easytags_suppress_ctags_warning	/home/guerretmx/vim/vimrc	/^let g:easytags_suppress_ctags_warning = 1$/;"	v	language:Vim
+g:NERDAltDelims_java	/home/guerretmx/vim/vimrc	/^let g:NERDAltDelims_java = 1$/;"	v	language:Vim
+g:NERDCommentEmptyLines	/home/guerretmx/vim/vimrc	/^let g:NERDCommentEmptyLines = 1$/;"	v	language:Vim
+g:NERDCompactSexyComs	/home/guerretmx/vim/vimrc	/^let g:NERDCompactSexyComs = 1$/;"	v	language:Vim
+g:NERDCustomDelimiters	/home/guerretmx/vim/vimrc	/^let g:NERDCustomDelimiters = { 'c': { 'left': '\/**','right': '*\/' } }$/;"	v	language:Vim
+g:NERDDefaultAlign	/home/guerretmx/vim/vimrc	/^let g:NERDDefaultAlign = 'left'$/;"	v	language:Vim
+g:NERDSpaceDelims	/home/guerretmx/vim/vimrc	/^let g:NERDSpaceDelims = 1$/;"	v	language:Vim
+g:nerdtree_tabs_open_on_console_startup	/home/guerretmx/vim/vimrc	/^let g:nerdtree_tabs_open_on_console_startup = 0$/;"	v	language:Vim
+g:NERDTrimTrailingWhitespace	/home/guerretmx/vim/vimrc	/^let g:NERDTrimTrailingWhitespace = 1$/;"	v	language:Vim
+g:pencil#autoformat	/home/guerretmx/vim/vimrc	/^let g:pencil#autoformat = 1      " 0=disable, 1=enable (def)$/;"	v	language:Vim
+g:pencil#cursorwrap	/home/guerretmx/vim/vimrc	/^let g:pencil#cursorwrap = 1     " 0=disable, 1=enable (def)$/;"	v	language:Vim
+g:pencil#joinspaces	/home/guerretmx/vim/vimrc	/^let g:pencil#joinspaces = 0     " 0=one_space (def), 1=two_spaces$/;"	v	language:Vim
+g:pencil#map#suspend_af	/home/guerretmx/vim/vimrc	/^let g:pencil#map#suspend_af = 'K'   " default is no mapping$/;"	v	language:Vim
+g:pencil#mode_indicators	/home/guerretmx/vim/vimrc	/^let g:pencil#mode_indicators = {'hard': '␍', 'auto': 'ª', 'soft': '⤸', 'off': '',}$/;"	v	language:Vim
+g:pencil#textwidth	/home/guerretmx/vim/vimrc	/^let g:pencil#textwidth = 74$/;"	v	language:Vim
+g:pencil#wrapModeDefault	/home/guerretmx/vim/vimrc	/^let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'$/;"	v	language:Vim
+g:syntastic_error_symbol	/home/guerretmx/vim/vimrc	/^let g:syntastic_error_symbol = '✘'$/;"	v	language:Vim
+g:syntastic_warning_symbol	/home/guerretmx/vim/vimrc	/^let g:syntastic_warning_symbol = "▲"$/;"	v	language:Vim
+g:UltiSnipsEditSplit	/home/guerretmx/vim/vimrc	/^ let g:UltiSnipsEditSplit="vertical"$/;"	v	language:Vim
+g:UltiSnipsExpandTrigger	/home/guerretmx/vim/vimrc	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v	language:Vim
+g:UltiSnipsJumpBackwardTrigger	/home/guerretmx/vim/vimrc	/^ let g:UltiSnipsJumpBackwardTrigger="<c-z>"$/;"	v	language:Vim
+g:UltiSnipsJumpForwardTrigger	/home/guerretmx/vim/vimrc	/^let g:UltiSnipsJumpForwardTrigger="<c-b>"$/;"	v	language:Vim
+g:ycm_key_list_previous_completion	/home/guerretmx/vim/vimrc	/^let g:ycm_key_list_previous_completion=[]$/;"	v	language:Vim
+g:ycm_key_list_select_completion	/home/guerretmx/vim/vimrc	/^let g:ycm_key_list_select_completion=[]$/;"	v	language:Vim
+goyo_enter	/home/guerretmx/vim/vimrc	/^function! s:goyo_enter()$/;"	f	language:Vim
+goyo_leave	/home/guerretmx/vim/vimrc	/^function! s:goyo_leave()$/;"	f	language:Vim
+mapleader	/home/guerretmx/vim/vimrc	/^let mapleader = ","$/;"	v	language:Vim
+mySyntastic	/home/guerretmx/vim/vimrc	/^augroup mySyntastic$/;"	a	language:Vim
+pencil	/home/guerretmx/vim/vimrc	/^augroup pencil$/;"	a	language:Vim
+pencil	/home/guerretmx/vim/vimrc	/^augroup pencil$/;"	a	language:Vim
+pencil	/home/guerretmx/vim/vimrc	/^augroup pencil$/;"	a	language:Vim
+Prose	/home/guerretmx/vim/vimrc	/^command! -nargs=0 Prose call Prose()$/;"	c	language:Vim
+Prose	/home/guerretmx/vim/vimrc	/^function! Prose()$/;"	f	language:Vim
+s	/home/guerretmx/vim/vimrc	/^nmap s <Plug>(easymotion-s2)$/;"	m	language:Vim
+t	/home/guerretmx/vim/vimrc	/^nmap t <Plug>(easymotion-t2)$/;"	m	language:Vim
